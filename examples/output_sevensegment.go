@@ -38,7 +38,7 @@ package main
 
 import (
 	"log"
-	"github.com/max7219"
+	"github.com/talkkonnect/max7219"
 )
 
 func main() {
