@@ -38,6 +38,7 @@ package max7219
 import (
 	"fmt"
 	"log"
+
 	"github.com/fulr/spidev"
 )
 
@@ -130,7 +131,7 @@ func (this *Device) sendBufferLine(position int) error {
 		buf[i*2] = byte(reg)
 		buf[i*2+1] = b
 	}
-	log.Printf("debug: Send to bus: %v\n", buf)
+	//log.Printf("debug: Send to bus: %v\n", buf)
 	_, err := this.spi.Xfer(buf)
 	if err != nil {
 		return err
@@ -245,4 +246,3 @@ func (this *Device) SevenSegmentDisplay(toDisplay string) error {
 	}
 	return nil
 }
-
