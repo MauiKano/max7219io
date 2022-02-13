@@ -222,26 +222,83 @@ func (this *Device) SevenSegmentDisplay(toDisplay string) error {
 
 	for i, digit := range toDisplay {
 		switch string(digit) {
+		case "A", "a":
+			this.Command(Max7219Reg(len(toDisplay)-i),119) //A
+		case "B", "b":
+			this.Command(Max7219Reg(len(toDisplay)-i),31)  //b
+		case "C":
+			this.Command(Max7219Reg(len(toDisplay)-i),78)  //C
+		case "c":
+			this.Command(Max7219Reg(len(toDisplay)-i),13)  //c
+		case "D", "d":
+			this.Command(Max7219Reg(len(toDisplay)-i),61)  //d
+		case "E", "e":
+			this.Command(Max7219Reg(len(toDisplay)-i),79)  //E
+		case "F", "f":
+			this.Command(Max7219Reg(len(toDisplay)-i),71)  //F
+		case "G", "g":
+			this.Command(Max7219Reg(len(toDisplay)-i),94)  //G
+		case "H":
+			this.Command(Max7219Reg(len(toDisplay)-i),55)  //H
+		case "h":
+			this.Command(Max7219Reg(len(toDisplay)-i),23)  //h
+		case "I", "i":
+			this.Command(Max7219Reg(len(toDisplay)-i),6)   //i
+		case "L", "l":
+			this.Command(Max7219Reg(len(toDisplay)-i),14)  //L
+		case "N", "n":
+			this.Command(Max7219Reg(len(toDisplay)-i),21)  //n
+		case "O":
+			this.Command(Max7219Reg(len(toDisplay)-i),99)  //O
+		case "o":
+			this.Command(Max7219Reg(len(toDisplay)-i),29)  //o
+		case "P", "p":
+			this.Command(Max7219Reg(len(toDisplay)-i),103) //p 
+		case "R", "r":
+			this.Command(Max7219Reg(len(toDisplay)-i),5)   //r
+		case "S", "s":
+			this.Command(Max7219Reg(len(toDisplay)-i),91)  //S
+		case "T", "t":
+			this.Command(Max7219Reg(len(toDisplay)-i),15)  //t
+		case "U":
+			this.Command(Max7219Reg(len(toDisplay)-i),62)  //U
+		case "u":
+			this.Command(Max7219Reg(len(toDisplay)-i),28)  //u
+		case "Y", "y":
+			this.Command(Max7219Reg(len(toDisplay)-i),59)   //Y
 		case "0":
-			this.Command(Max7219Reg(len(toDisplay)-i), 126)
+			this.Command(Max7219Reg(len(toDisplay)-i), 126) //0
 		case "1":
-			this.Command(Max7219Reg(len(toDisplay)-i), 48)
+			this.Command(Max7219Reg(len(toDisplay)-i), 48)  //1 
 		case "2":
-			this.Command(Max7219Reg(len(toDisplay)-i), 109)
+			this.Command(Max7219Reg(len(toDisplay)-i), 109) //2
 		case "3":
-			this.Command(Max7219Reg(len(toDisplay)-i), 121)
+			this.Command(Max7219Reg(len(toDisplay)-i), 121) //3
 		case "4":
-			this.Command(Max7219Reg(len(toDisplay)-i), 51)
+			this.Command(Max7219Reg(len(toDisplay)-i), 51)  //4
 		case "5":
-			this.Command(Max7219Reg(len(toDisplay)-i), 91)
+			this.Command(Max7219Reg(len(toDisplay)-i), 91)  //5
 		case "6":
-			this.Command(Max7219Reg(len(toDisplay)-i), 95)
+			this.Command(Max7219Reg(len(toDisplay)-i), 95)  //6
 		case "7":
-			this.Command(Max7219Reg(len(toDisplay)-i), 112)
+			this.Command(Max7219Reg(len(toDisplay)-i), 112) //7
 		case "8":
-			this.Command(Max7219Reg(len(toDisplay)-i), 127)
+			this.Command(Max7219Reg(len(toDisplay)-i), 127) //8
 		case "9":
-			this.Command(Max7219Reg(len(toDisplay)-i), 115)
+			this.Command(Max7219Reg(len(toDisplay)-i), 115) //9
+		case ".":
+			this.Command(Max7219Reg(len(toDisplay)-i),128)  //.
+		case "-":
+			this.Command(Max7219Reg(len(toDisplay)-i),129)  //-
+		case "=":
+			this.Command(Max7219Reg(len(toDisplay)-i),9)    //= lower
+		case "J","j":
+			this.Command(Max7219Reg(len(toDisplay)-i),64)   //= upper
+		case "K","k":
+			this.Command(Max7219Reg(len(toDisplay)-i),72)   //= split
+		case "M","m":
+			this.Command(Max7219Reg(len(toDisplay)-i),73)   //==
+
 		}
 	}
 	return nil

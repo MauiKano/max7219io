@@ -49,5 +49,5 @@ func main() {
 	}
 	defer mtx.Close()
 
-	mtx.Device.SevenSegmentDisplay("1234")
+	mtx.Device.SevenSegmentDisplay("ta03")
 }
