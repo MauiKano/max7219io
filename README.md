@@ -1,5 +1,6 @@
 MAX7219 driver and 8 Digit 7 Segment Display
 ============================================
+my comments here ...
 
 This library written in [Go programming language](https://golang.org/) to output a number string to SPI Max 7219 x 8 Seven Segment Display
 
