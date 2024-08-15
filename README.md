@@ -1,6 +1,5 @@
 MAX7219 driver and 8 Digit 7 Segment Display
 ============================================
-my comments here ...
 
 This library written in [Go programming language](https://golang.org/) to output a number string to SPI Max 7219 x 8 Seven Segment Display
 
@@ -8,7 +7,16 @@ This library written in [Go programming language](https://golang.org/) to output
 
 Compatibility
 -------------
-Tested on Raspberry PI 3 (model B+)
+Tested on Raspberry PI Zero 2. Make sure that the spi bus is enabled on the raspberry pi:
+- sudo raspi-config
+- Navigate to Interface Options:
+   In the raspi-config menu, use the arrow keys to navigate to Interface Options and press Enter.
+   Enable SPI:
+   Select SPI and press Enter.
+   Choose Yes to enable the SPI interface.
+   Press Enter to confirm.
+
+- Finish and Reboot:
 
 Golang usage
 ------------
