@@ -39,7 +39,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/fulr/spidev"
+	"github.com/MauiKano/spidev"
 )
 
 type Max7219Reg byte
