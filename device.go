@@ -38,8 +38,7 @@ package max7219
 import (
 	"fmt"
 	"log"
-
-	"github.com/MauiKano/spidev"
+	"spidev"
 )
 
 type Max7219Reg byte
@@ -87,6 +86,7 @@ func (this *Device) GetLedLineCount() int {
 
 func (this *Device) Open(spibus int, spidevice int, brightness byte) error {
 	devstr := fmt.Sprintf("/dev/spidev%d.%d", spibus, spidevice)
+        fmt.Println("max7219 open device", devstr)
 	spi, err := spidev.NewSPIDevice(devstr)
 	if err != nil {
 		return err
