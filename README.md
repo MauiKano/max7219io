@@ -45,7 +45,7 @@ Installation
 ------------
 
 ```bash
-$ go get -u github.com/talkkonnect/max7219
+$ go get -u github.com/MauiKano/max7219
 ```
 
 Credits
