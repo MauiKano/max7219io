@@ -38,7 +38,8 @@ package max7219
 import (
 	"fmt"
 	"log"
-	"spidev"
+///	"spidev"
+	"github.com/MauiKano/spidev"
 )
 
 type Max7219Reg byte
