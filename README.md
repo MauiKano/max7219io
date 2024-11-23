@@ -3,15 +3,14 @@ MAX7219 driver and 8 Digit 7 Segment Display
 
 This library written in [Go programming language](https://golang.org/) to output a number string to SPI Max 7219 x 8 Seven Segment Display
 
-This branch here is a fork of:
 
 ![image](https://raw.github.com/talkkonnect/max7219/master/images/max7219.jpg)
 
-The modification of the fork is the replacement of the backend SDL driver. Here in this fork
+This branch here is a fork in which backend SDL driver is replaced with the one from periph.io
 
-periph.ip (periph.io/x/conn/v3/spi)
+periph.io (periph.io/x/conn/v3/spi)
 
-is used instead of 
+The spi driver of periph.io is used instead of 
 
 spidev (github.com/fulr/spidev)
 
