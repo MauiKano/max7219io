@@ -3,20 +3,23 @@ MAX7219 driver and 8 Digit 7 Segment Display
 
 This library written in [Go programming language](https://golang.org/) to output a number string to SPI Max 7219 x 8 Seven Segment Display
 
+This branch here is a fork of:
+
 ![image](https://raw.github.com/talkkonnect/max7219/master/images/max7219.jpg)
+
+The modification of the fork is the replacement of the backend SDL driver. Here in this fork
+
+periph.ip (periph.io/x/conn/v3/spi)
+
+is used instead of 
+
+spidev (github.com/fulr/spidev)
+
+which is used in the original version.
 
 Compatibility
 -------------
-Tested on Raspberry PI Zero 2. Make sure that the spi bus is enabled on the raspberry pi:
-- sudo raspi-config
-- Navigate to Interface Options:
-   In the raspi-config menu, use the arrow keys to navigate to Interface Options and press Enter.
-   Enable SPI:
-   Select SPI and press Enter.
-   Choose Yes to enable the SPI interface.
-   Press Enter to confirm.
-
-- Finish and Reboot:
+Tested on Raspberry PI 3 (model B+)
 
 Golang usage
 ------------
@@ -45,7 +48,7 @@ Installation
 ------------
 
 ```bash
-$ go get -u github.com/MauiKano/max7219
+$ go get -u github.com/talkkonnect/max7219
 ```
 
 Credits
