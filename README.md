@@ -16,9 +16,11 @@ spidev (github.com/fulr/spidev)
 
 which is used in the original version.
 
+ONLY device.go IS ADAPTED. matrix.go IS UNCHANGED.
+
 Compatibility
 -------------
-Tested on Raspberry PI 3 (model B+)
+Tested on Raspberry PI Zero
 
 Golang usage
 ------------
